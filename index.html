@@ -3,315 +3,365 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suplementacja bez ściemy – e-book</title>
-  <meta name="description" content="Praktyczny przewodnik po suplementacji oparty na badaniach naukowych, stworzony dla osób w wieku 18–22 lat.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Zanim kupisz – poradnik suplementacyjny 18–22</title>
+  <meta name="description" content="Połowa tej książki mówi, czego nie kupować. Pierwsze 48 stron za darmo, na maila.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/archivo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ NAV ============ -->
-  <header class="nav">
-    <div class="wrap nav__inner">
-      <a href="#" class="nav__logo">Suple<span>/</span>bez ściemy</a>
-      <a href="#oferta" class="btn btn--small">Kup e-booka</a>
+  <header class="top">
+    <div class="wrap top__inner">
+      <a href="#" class="top__logo">Zanim kupisz</a>
+      <a href="#pobierz" class="top__link">Pobierz 48 stron</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ============ 1. HERO ============ -->
-    <section class="hero" id="top">
+    <!-- 1 + 2. HERO z paragonem -->
+    <section class="hero" id="pobierz">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="badge"><i data-lucide="zap"></i> Bez ściemy <span class="badge__sep"></span> Dla organizmu 18–22 lata</p>
-          <h1>Osiągnij formę, skupienie i energię bez marnowania pieniędzy na zbędne suplementy.</h1>
-          <p class="hero__lead">Praktyczny przewodnik po suplementacji oparty na badaniach naukowych, stworzony specjalnie dla młodych dorosłych.</p>
-          <div class="hero__actions">
-            <a href="#oferta" class="btn btn--primary btn--pulse" id="hero-cta">Kup e-booka za 49 zł</a>
-            <span class="hero__price-note"><s>99 zł</s> cena na start</span>
-          </div>
-          <ul class="hero__facts">
-            <li><i data-lucide="file-text"></i> PDF + EPUB</li>
-            <li><i data-lucide="mail"></i> Na maila w kilka sekund</li>
-            <li><i data-lucide="flask-conical"></i> Źródła do każdej tezy</li>
-          </ul>
+          <p class="eyebrow">Poradnik suplementacyjny · 18–22 lata</p>
+          <h1>Połowa tej książki mówi, czego nie kupować.</h1>
+          <p class="lede">Rynek suplementów w Polsce jest wart miliardy złotych i został zbudowany na jednym założeniu: że nie sprawdzisz. Pierwsze 48 stron pokazuje, jak sprawdzić. Są za darmo.</p>
+
+          <form class="signup" data-tags="zanim-kupisz,pdf-czesc-darmowa" data-success="Gotowe. PDF jest w drodze na podany adres. Jeśli nie widzisz go za kilka minut, sprawdź folder „Oferty” albo spam.">
+            <label class="signup__label" for="email-hero">Adres e-mail</label>
+            <div class="signup__row">
+              <input class="signup__input" type="email" id="email-hero" name="contact[email]" autocomplete="email" inputmode="email" placeholder="ty@przyklad.pl" required>
+              <button class="btn" type="submit">Wyślij mi PDF</button>
+            </div>
+            <label class="signup__consent">
+              <input type="checkbox" name="marketing">
+              <span>Chcę też dostawać maile o nowych rozdziałach i części płatnej. Nieobowiązkowe, mogę się wypisać w każdej chwili.</span>
+            </label>
+            <p class="signup__status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="tiny hero__meta">PDF · 48 stron · wysyłka mailem · zero linków afiliacyjnych</p>
         </div>
 
-        <!-- Mockup: drukowana książka + telefon (czysty CSS, podmień na grafikę .webp) -->
-        <div class="hero__visual" aria-hidden="true">
-          <div class="book">
-            <div class="book__spine"></div>
-            <div class="cover">
-              <span class="cover__tag">Przewodnik</span>
-              <span class="cover__title">Suplementacja bez ściemy</span>
-              <span class="cover__sub">Co działa, co nie i ile to kosztuje</span>
-              <span class="cover__caps"><b></b><b></b><b></b></span>
-              <span class="cover__author">[Twoje Imię]</span>
-            </div>
+        <figure class="receipt-wrap">
+          <div class="receipt" aria-label="Paragon: miesięczne koszty produktów z części III skreślone, jedyna nieskreślona pozycja to cztery badania krwi">
+            <p class="receipt__head">APTEKA / SKLEP SPORT.</p>
+            <div class="dash"></div>
+            <div class="row receipt__cols"><span>POZYCJA</span><span>ZŁ / MIES.</span></div>
+            <div class="row strike"><span>BCAA</span><span>60–120</span></div>
+            <div class="row strike"><span>GLUTAMINA</span><span>40–80</span></div>
+            <div class="row strike"><span>HMB</span><span>80–150</span></div>
+            <div class="row strike"><span>„BOOSTER TESTOSTERONU”</span><span>80–200</span></div>
+            <div class="row strike"><span>SPALACZ TŁUSZCZU</span><span>100–200</span></div>
+            <div class="row strike"><span>BIOTYNA, WYSOKA DAWKA</span><span>10–25</span></div>
+            <div class="row strike"><span>PRODUKTY „DETOKS”</span><span>50–150</span></div>
+            <div class="dash"></div>
+            <div class="row receipt__keep"><span>4 BADANIA KRWI</span><span>130–175</span></div>
+            <div class="row receipt__note"><span></span><span>JEDNORAZOWO</span></div>
+            <div class="dash"></div>
+            <p class="receipt__foot">Ceny z rozdziału 1 i z podsumowania części III. Ilustracja, nie wyliczenie Twoich wydatków.</p>
           </div>
-          <div class="phone">
-            <div class="phone__notch"></div>
-            <div class="phone__screen">
-              <div class="cover cover--small">
-                <span class="cover__tag">E-book</span>
-                <span class="cover__title">Suplementacja bez ściemy</span>
-                <span class="cover__caps"><b></b><b></b><b></b></span>
-                <span class="cover__author">[Twoje Imię]</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          <figcaption>„Nie sprzedaję Ci nadziei w kapsułce. Sprzedaję Ci sto trzydzieści złotych zamiast tysiąca.” <span>Rozdział 1</span></figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ============ 2. PROBLEM ============ -->
-    <section class="section section--alt" id="problem">
+    <!-- 3. DLA KOGO -->
+    <section class="section section--surface" id="dla-kogo">
       <div class="wrap">
-        <h2 class="section__title">Zagubiony w gąszczu trendów z TikToka i Instagrama?</h2>
-        <div class="problems">
-          <article class="problem">
-            <i data-lucide="wallet"></i>
-            <h3>Przepalony budżet</h3>
-            <p>Kupujesz suplementy polecane przez influencerów, które <strong>po prostu nie działają</strong>.</p>
+        <h2>Zwykle zaczyna się od jednej z trzech sytuacji</h2>
+        <div class="cases">
+          <article class="case">
+            <h3>Pierwszy rok na siłowni</h3>
+            <p>Półka w sklepie sportowym wygląda jak lista obowiązkowa. BCAA, glutamina, HMB i boostery testosteronu mają tu po osobnym rozdziale w części o tym, czego nie kupować.</p>
+            <p class="case__fact"><span>Gram białka z odżywki</span><b>0,14–0,17 zł</b></p>
+            <p class="case__fact"><span>Gram białka z piersi kurczaka</span><b>0,13 zł</b></p>
           </article>
-          <article class="problem">
-            <i data-lucide="battery-low"></i>
-            <h3>Brak energii i mgła mózgowa</h3>
-            <p>Praca, studia, treningi. Czujesz zmęczenie i <strong>nie wiesz, jak poprawić sen i regenerację</strong>.</p>
+          <article class="case">
+            <h3>Egzamin, nocna zmiana, za mało snu</h3>
+            <p>Część druga zaczyna się od światła, kofeiny i snu, nie od kapsułek. Rozdział o rytmie dobowym ma osobną część dla osób pracujących nocami, bo standardowe rady są u nich odwrócone.</p>
+            <p class="case__fact"><span>Tydzień snu poniżej 5 godzin</span><b>testosteron −10–15%</b></p>
           </article>
-          <article class="problem">
-            <i data-lucide="shuffle"></i>
-            <h3>Chaos i brak wiedzy</h3>
-            <p>Nie wiesz, co łączyć, a czego unikać, żeby <strong>nie zrobić sobie krzywdy</strong>.</p>
+          <article class="case">
+            <h3>Zmęczenie, skóra, włosy albo „coś jest nie tak”</h3>
+            <p>Zmęczenie może być z niedoboru żelaza, z niewyspania albo z nauki do egzaminu. Uczucie jest to samo, a tabletka naprawia tylko jedno z nich. Dlatego książka zaczyna się od badań, nie od zakupów.</p>
+            <p class="case__fact"><span>Cztery badania krwi</span><b>130–175 zł</b></p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 3. ROZWIĄZANIE ============ -->
-    <section class="section" id="co-w-srodku">
+    <!-- 4. CO JEST W ŚRODKU -->
+    <section class="section" id="spis">
       <div class="wrap">
-        <h2 class="section__title">Wszystko, co musisz wiedzieć o suplementacji, w jednym miejscu.</h2>
-        <div class="benefits">
-          <div class="benefit">
-            <span class="benefit__icon"><i data-lucide="brain"></i></span>
-            <h3>Focus i nauka</h3>
-            <p>Co wspiera pamięć i koncentrację podczas sesji albo w pracy.</p>
-          </div>
-          <div class="benefit">
-            <span class="benefit__icon"><i data-lucide="dumbbell"></i></span>
-            <h3>Forma i trening</h3>
-            <p>Co naprawdę działa na siłę, regenerację i sylwetkę.</p>
-          </div>
-          <div class="benefit">
-            <span class="benefit__icon"><i data-lucide="moon"></i></span>
-            <h3>Głęboki sen</h3>
-            <p>Jak zasypiać szybciej i budzić się wypoczętym.</p>
-          </div>
-          <div class="benefit">
-            <span class="benefit__icon"><i data-lucide="piggy-bank"></i></span>
-            <h3>Oszczędność</h3>
-            <p>Gotowe listy „co kupić” i „czego unikać”. Zaoszczędzisz setki złotych.</p>
-          </div>
-          <div class="benefit benefit--wide">
-            <span class="benefit__icon"><i data-lucide="clock"></i></span>
-            <h3>Synergia i pory przyjmowania</h3>
-            <p>Jak łączyć witaminy i minerały, żeby organizm faktycznie je przyswoił.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <h2>Co jest w środku</h2>
+        <p class="lede section__lede">Książka ma dwie części. Darmowa uczy podejmować decyzje i mówi, czego nie kupować. Płatna opisuje substancje, które mogą mieć sens, i jest jeszcze w przygotowaniu.</p>
 
-    <!-- ============ 4. SPIS TREŚCI ============ -->
-    <section class="section section--alt" id="spis-tresci">
-      <div class="wrap toc">
-        <div class="toc__list">
-          <h2 class="section__title section__title--left">Zajrzyj do środka</h2>
-          <p class="section__lead">Kliknij rozdział, żeby zobaczyć, o czym jest.</p>
-
-          <div class="accordion">
-            <details>
-              <summary><span class="ch">1</span> Zanim cokolwiek kupisz</summary>
-              <p>Jak czytać badania, skąd wiedzieć, że suplement działa, i kiedy warto zrobić badania krwi.</p>
-            </details>
-            <details>
-              <summary><span class="ch">2</span> Fundamenty: D3, omega-3, magnez</summary>
-              <p>Trzy suplementy, od których większość osób powinna zacząć, z dawkami i formami.</p>
-            </details>
-            <details>
-              <summary><span class="ch">3</span> Focus i nauka</summary>
-              <p>Kofeina, L-teanina i inne substancje: co pomaga w nauce, a co jest tylko marketingiem.</p>
-            </details>
-            <details>
-              <summary><span class="ch">4</span> Trening i forma</summary>
-              <p>Kreatyna, białko, beta-alanina. Co ma sens na siłowni, a co jest drogim dodatkiem.</p>
-            </details>
-            <details>
-              <summary><span class="ch">5</span> Sen i regeneracja</summary>
-              <p>Melatonina, magnez, glicyna i nawyki, które działają lepiej niż jakakolwiek tabletka.</p>
-            </details>
-            <details>
-              <summary><span class="ch">6</span> Czego unikać</summary>
-              <p>Lista popularnych suplementów z social mediów, na które szkoda pieniędzy.</p>
-            </details>
-            <details>
-              <summary><span class="ch">7</span> Synergia i pory przyjmowania</summary>
-              <p>Co brać razem, co osobno, rano czy wieczorem, z posiłkiem czy bez.</p>
-            </details>
-            <details>
-              <summary><span class="ch">8</span> Twój plan na 50, 100 i 200 zł</summary>
-              <p>Gotowe zestawy dopasowane do budżetu i celu.</p>
-            </details>
-          </div>
-        </div>
-
-        <!-- Podgląd stron (CSS; podmień na screeny z e-booka) -->
-        <div class="pages" aria-hidden="true">
-          <div class="page page--back">
-            <span class="page__h">Rozdz. 7 · Synergia</span>
-            <div class="page__table">
-              <div><b>Rano</b><span>D3 + K2, omega-3</span></div>
-              <div><b>Trening</b><span>Kreatyna 3–5 g</span></div>
-              <div><b>Wieczór</b><span>Magnez, glicyna</span></div>
+        <div class="toc">
+          <div class="toc__col">
+            <div class="toc__head">
+              <h3>Część darmowa</h3>
+              <span class="pill p1">Dostępna · 48 stron</span>
             </div>
-            <span class="page__line"></span><span class="page__line page__line--s"></span>
-          </div>
-          <div class="page page--front">
-            <span class="page__h">Rozdz. 4 · Trening</span>
-            <span class="page__big">Kreatyna</span>
-            <span class="page__line"></span><span class="page__line"></span><span class="page__line page__line--s"></span>
-            <div class="page__chart">
-              <i style="--h:35%"></i><i style="--h:55%"></i><i style="--h:80%"></i><i style="--h:95%"></i>
+
+            <p class="toc__part">Część 0. Instrukcja obsługi</p>
+            <ol class="toc__list toc__list--plain">
+              <li>Cztery poziomy dowodu</li>
+              <li>Ramka „tradycja bez dowodów”</li>
+              <li>Bramki wiekowe</li>
+              <li>Czym ta książka nie jest</li>
+            </ol>
+
+            <p class="toc__part">Część I. Zanim cokolwiek kupisz</p>
+            <ol class="toc__list" start="1">
+              <li>Cztery badania, które zmieniają wszystko</li>
+              <li>Jak czytać etykietę suplementu</li>
+              <li>Ile to naprawdę kosztuje</li>
+              <li>Kto to sfinansował</li>
+            </ol>
+
+            <p class="toc__part">Część II. Najpierw zachowanie</p>
+            <ol class="toc__list" start="5">
+              <li>Światło rano, ciemność wieczorem</li>
+              <li>Kofeina, energetyki i sen, którego nie masz</li>
+              <li>Jedzenie, zanim proszek</li>
+              <li>Sen, masa ciała, trening, czyli co naprawdę podnosi testosteron</li>
+            </ol>
+
+            <div class="toc__highlight">
+              <p class="toc__part">Część III. Czego nie kupować</p>
+              <ol class="toc__list" start="9">
+                <li>BCAA</li>
+                <li>Glutamina</li>
+                <li>HMB</li>
+                <li>„Boostery testosteronu”</li>
+                <li>Spalacze tłuszczu</li>
+                <li>Biotyna w wysokich dawkach</li>
+                <li>„Detoks”: srebro koloidalne, chlorella, oczyszczanie z metali ciężkich</li>
+                <li>Berberyna</li>
+              </ol>
+              <p class="tiny">Przy każdej pozycji jest pole „dla kogo to może mieć sens”. Gdyby odpowiedź zawsze brzmiała „dla nikogo”, byłaby to propaganda, nie poradnik.</p>
             </div>
-            <span class="page__caption">Siła w czasie, suplementacja vs placebo (dane przykładowe)</span>
-            <span class="page__line"></span><span class="page__line page__line--s"></span>
+
+            <a href="#pobierz" class="btn btn--block">Pobierz część darmową</a>
+          </div>
+
+          <div class="toc__col toc__col--muted">
+            <div class="toc__head">
+              <h3>Część płatna</h3>
+              <span class="pill p4">W przygotowaniu</span>
+            </div>
+
+            <p class="toc__part">Część IV. Referencje: 32 karty substancji</p>
+            <p class="toc__desc">Każda karta ma tę samą strukturę: poziom dowodu, bramka wiekowa, co robi, dla kogo działa i dla kogo nie, dawka ze wskazaniem źródła, jak rozpoznać dobry produkt, czerwone flagi, koszt miesięczny, czego wciąż nie wiemy.</p>
+            <ul class="blocks">
+              <li><b>Fundament</b><span>9 kart</span></li>
+              <li><b>Sen</b><span>3 karty</span></li>
+              <li><b>Nauka, stres i głowa</b><span>7 kart</span></li>
+              <li><b>Siłownia i wysiłek</b><span>7 kart</span></li>
+              <li><b>Skóra, odporność i jelita</b><span>6 kart</span></li>
+            </ul>
+
+            <p class="toc__part">Część V. Ścieżki</p>
+            <ol class="toc__list" start="17">
+              <li>Egzamin, nauka, mgła w głowie</li>
+              <li>Pierwszy rok na siłowni</li>
+              <li>Trądzik</li>
+              <li>Dieta roślinna i wegańska</li>
+              <li>Jeśli jesteś kobietą 18–22</li>
+              <li>Ciągłe zmęczenie</li>
+              <li>Pierwsze własne mieszkanie i gotowanie od zera</li>
+            </ol>
+
+            <p class="toc__part">Część VI. Ostrożnie</p>
+            <ol class="toc__list" start="24">
+              <li>Jak rozpoznać radę, która może Ci zaszkodzić</li>
+              <li>Kiedy suplement wchodzi w drogę leczeniu <span class="wip">w przygotowaniu</span></li>
+              <li>Kiedy suplement przestaje być o zdrowiu <span class="wip">w przygotowaniu</span></li>
+              <li>Leki na receptę kupowane bez recepty <span class="wip">w przygotowaniu</span></li>
+              <li>Dla rodzica nastolatka 15–17 <span class="wip">w przygotowaniu</span></li>
+            </ol>
+
+            <p class="toc__part">Aneksy <span class="wip">w przygotowaniu</span></p>
+            <ul class="toc__list toc__list--plain">
+              <li>Tabela zbiorcza: substancja, poziom dowodu, bramka wiekowa, koszt</li>
+              <li>Tabela interakcji z lekami</li>
+              <li>Co odstawić przed badaniami krwi i na ile dni</li>
+              <li>Słowniczek</li>
+              <li>Bibliografia z podziałem na rozdziały</li>
+              <li>Recenzja merytoryczna: kto, kiedy, jaki zakres, co zostało zmienione</li>
+            </ul>
+
+            <a href="#powiadom" class="btn btn--ghost btn--block">Powiadom mnie o dostępności</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 5. AUTOR ============ -->
-    <section class="section" id="autor">
-      <div class="wrap author">
-        <div class="author__photo">
-          <!-- Podmień na: <img src="autor.webp" alt="[Twoje Imię]" width="480" height="560"> -->
-          <div class="author__placeholder"><i data-lucide="user-round"></i><span>Zdjęcie autora<br>(lifestyle / sport)</span></div>
+    <!-- 5. POZIOMY DOWODU -->
+    <section class="section section--surface" id="poziomy">
+      <div class="wrap levels">
+        <div class="levels__copy">
+          <h2>Cztery poziomy dowodu</h2>
+          <p>Każda substancja w tej książce ma przypisany jeden z czterech poziomów. To nie jest ocena, czy działa. To ocena, jak pewni jesteśmy tego, co mówimy.</p>
+          <p>Dlatego plakietki różnią się gęstością jednego koloru, a nie zielenią i czerwienią.</p>
         </div>
-        <div class="author__bio">
-          <h2 class="section__title section__title--left">Cześć! Nazywam się [Twoje Imię]</h2>
-          <p>[Kilka zdań o tym, kim jesteś: wykształcenie, sport, doświadczenie. Np. „Studiuję dietetykę, od 6 lat trenuję siłowo i przez ten czas wydałem fortunę na suplementy, z których połowa nie miała sensu.”]</p>
-          <p>[Dlaczego napisałeś ten przewodnik. Np. „Chciałem zebrać w jednym miejscu to, co mówią badania, zamiast tego, co mówią reklamy. Wszystko sprawdziłem na sobie i na osobach, z którymi pracuję.”]</p>
-          <ul class="author__creds">
-            <li><i data-lucide="graduation-cap"></i> [Wykształcenie / certyfikat]</li>
-            <li><i data-lucide="activity"></i> [Doświadczenie treningowe]</li>
-            <li><i data-lucide="book-open"></i> [Liczba przeanalizowanych badań]</li>
-          </ul>
+        <ul class="levels__list">
+          <li><span class="pill p1">Poziom 1</span><div><b>Dobrze udokumentowane.</b> Metaanalizy, przeglądy systematyczne albo wytyczne towarzystw naukowych.</div></li>
+          <li><span class="pill p2">Poziom 2</span><div><b>Obiecujące, wymaga potwierdzenia.</b> Pojedyncze badania z randomizacją na ludziach.</div></li>
+          <li><span class="pill p3">Poziom 3</span><div><b>Wstępne przesłanki.</b> Badania obserwacyjne, na zwierzętach, na komórkach. Ciekawe, ale to nie powód, żeby coś kupić.</div></li>
+          <li><span class="pill p4">Poziom 4</span><div><b>Stosowane tradycyjnie, bez potwierdzenia.</b> Zawsze w osobnej ramce, żeby nie pomyliło się z resztą.</div></li>
+        </ul>
+        <div class="note levels__trap">
+          <p class="eyebrow">Pułapka</p>
+          <p><span class="pill p1">Poziom 1</span> <b>BCAA.</b> Dowody są mocne i mówią, że przy normalnej diecie to strata pieniędzy. Poziom 1 mówi o jakości dowodów, nie o sile działania.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 6. OPINIE (ukryte do czasu zebrania prawdziwych) ============
-    Aby włączyć: usuń atrybut hidden i wstaw screeny opinii jako <img> w .reviews
-    <section class="section section--alt" id="opinie" hidden>
+    <!-- 6. FRAGMENT -->
+    <section class="section" id="fragment">
+      <div class="wrap wrap--read">
+        <p class="eyebrow">Fragment · część III, rozdział 14</p>
+        <article class="excerpt">
+          <h2>Biotyna w wysokich dawkach</h2>
+          <p>Ten rozdział jest inny od pozostałych. Biotyna nie jest toksyczna i nie jest droga. Problem polega na czymś, czego nikt się nie spodziewa.</p>
+          <p><b>Co obiecuje:</b> mocniejsze włosy i paznokcie.</p>
+          <p><b>Czy działa:</b> u osoby bez niedoboru nie. Przegląd systematyczny obejmujący dziesięć badań nie wykazał korzyści. Wszystkie opisane przypadki poprawy dotyczyły osób z wcześniejszą patologią: rzadkim wrodzonym niedoborem enzymu, żywieniem pozajelitowym albo wieloletnim przyjmowaniem leków przeciwpadaczkowych.</p>
+          <p>Amerykański instytut zdrowia formułuje to jeszcze mocniej: <b>ciężki niedobór biotyny u zdrowej osoby na normalnej diecie nigdy nie został opisany.</b> Nie „jest rzadki”. Nie został opisany ani razu.</p>
+          <p>Typowa polska tabletka „na włosy” zawiera 10 000 mikrogramów, czyli <b>333 razy więcej niż dzienne zapotrzebowanie</b>. Odnotowano produkty z 20 miligramami, czyli 667 razy.</p>
+
+          <h3>A teraz rzecz, dla której ten rozdział istnieje</h3>
+          <p><b>Biotyna zaburza wyniki badań laboratoryjnych.</b> Wiele oznaczeń hormonalnych opiera się na reakcji z jej udziałem, więc nadmiar we krwi wprowadza aparat w błąd. Kierunek pomyłki zależy od rodzaju testu:</p>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Typ testu</th><th>Przykłady</th><th>Wynik wychodzi</th></tr></thead>
+              <tbody>
+                <tr><td>kanapkowy</td><td>TSH, troponina, hCG, PTH, markery nowotworowe</td><td><b>fałszywie niski</b></td></tr>
+                <tr><td>kompetycyjny</td><td>FT4, FT3, kortyzol, witamina D</td><td><b>fałszywie wysoki</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Złożenie tych dwóch efektów daje obraz, który lekarz odczyta jako nadczynność tarczycy u osoby całkowicie zdrowej. Opisano przypadek przy dawce dokładnie 10 000 mikrogramów, czyli tej popularnej tabletce: TSH 0,03, FT4 powyżej 8,0, FT3 powyżej 30,0. Wszystko wróciło do normy po pięciu dniach od odstawienia.</p>
+          <p>Konsekwencją takiego wyniku może być podanie leków na tarczycę albo jodu promieniotwórczego osobie, która tego nie potrzebuje.</p>
+          <div class="warnbox">
+            <p><b>Najpoważniejszy opisany przypadek:</b> amerykańska agencja leków podała, że pacjent przyjmujący wysokie dawki biotyny zmarł po tym, jak wynik troponiny, badania stosowanego w diagnostyce zawału, wyszedł fałszywie niski.</p>
+            <p>Uczciwie: to jeden zgłoszony przypadek, nie oszacowanie ryzyka populacyjnego. Ale skala zjawiska jest realna. Około <b>7% pacjentów trafiających na oddziały ratunkowe</b> ma we krwi podwyższoną biotynę.</p>
+          </div>
+          <p>Ostrzeżenia w tej sprawie wydali regulatorzy amerykańscy, europejscy i maltańscy.</p>
+
+          <h3>Co z tym zrobić</h3>
+          <ol>
+            <li>Odstaw co najmniej dobę przed badaniami hormonalnymi. Przy dawkach powyżej 5 mg na trzy do siedmiu dni.</li>
+            <li>Powiedz o biotynie, jeśli trafisz do szpitala z bólem w klatce piersiowej. To jedno zdanie może zmienić diagnozę.</li>
+            <li>Jeśli wypadają Ci włosy, zbadaj ferrytynę i TSH zamiast kupować biotynę. Najczęstsze przyczyny są tam, nie w niedoborze biotyny.</li>
+          </ol>
+          <p><b>Dla kogo to może mieć sens:</b> dla osób z rozpoznanym niedoborem biotynidazy i w kilku innych rzadkich sytuacjach medycznych.</p>
+        </article>
+        <p class="excerpt__after">To jeden z ośmiu rozdziałów części III. <a href="#pobierz">Pozostałe siedem jest w PDF-ie.</a></p>
+      </div>
+    </section>
+
+    <!-- 7. WIARYGODNOŚĆ -->
+    <section class="section section--surface" id="jak-powstala">
       <div class="wrap">
-        <h2 class="section__title">Co mówią inni w Twoim wieku?</h2>
-        <div class="reviews">
-          <img src="opinia-1.webp" alt="Opinia czytelnika z Instagrama">
+        <h2>Jak powstała ta książka</h2>
+        <dl class="stats">
+          <div><dt>Opisanych substancji</dt><dd>40</dd></div>
+          <div><dt>Zweryfikowanych odniesień do źródeł</dt><dd>1400+</dd></div>
+          <div><dt>Poziomy dowodu</dt><dd>4</dd></div>
+          <div><dt>Linków afiliacyjnych i sponsorów</dt><dd>0</dd></div>
+        </dl>
+        <div class="trust">
+          <div>
+            <h3>Nikt za nią nie zapłacił</h3>
+            <p>Nie ma tu linków afiliacyjnych ani sponsorów. Żaden producent nie zapłacił za obecność ani za nieobecność w tej książce. Jeśli to się kiedykolwiek zmieni, będzie o tym napisane na pierwszej stronie, a nie w regulaminie.</p>
+          </div>
+          <div>
+            <h3>Niepewność jest w tekście, nie w przypisie</h3>
+            <p>Każda substancja przeszła przez kartę dowodową z obowiązkowymi polami „dla kogo nie działa” i „dowody przeciw”. Gdy dowody są słabe, piszę to w tym samym akapicie, w którym opisuję substancję. Książka brzmi przez to mniej stanowczo niż konkurencja.</p>
+          </div>
+          <div>
+            <h3>Recenzja jeszcze się nie odbyła</h3>
+            <p>Merytoryczna recenzja dietetyka jest zaplanowana, ale jeszcze się nie zaczęła. Kiedy się zakończy, osobny aneks opisze, kto recenzował, w jakim zakresie i co zostało zmienione. Do tego czasu nie piszę, że ktokolwiek tę książkę zatwierdził.</p>
+          </div>
         </div>
-      </div>
-    </section>
-    -->
-
-    <!-- ============ 7. OFERTA ============ -->
-    <section class="section section--alt" id="oferta">
-      <div class="wrap">
-        <h2 class="section__title">Jedna porcja wiedzy, która starczy na lata</h2>
-
-        <div class="label">
-          <div class="label__head">
-            <span class="label__name">Skład</span>
-            <span class="label__serving">Porcja: 1 e-book · dostęp na zawsze</span>
-          </div>
-          <div class="label__rows">
-            <div class="label__row">
-              <span><i data-lucide="book-open"></i> E-book w PDF i EPUB</span>
-              <span>Kindle, iPad, telefon</span>
-            </div>
-            <div class="label__row">
-              <span><i data-lucide="list-checks"></i> Checklista suplementacyjna</span>
-              <span class="label__bonus">Bonus</span>
-            </div>
-            <div class="label__row label__row--sub">
-              <span>Harmonogram do wydruku, na lodówkę</span>
-              <span>PDF</span>
-            </div>
-            <div class="label__row">
-              <span><i data-lucide="refresh-cw"></i> Aktualizacje e-booka</span>
-              <span>Za darmo</span>
-            </div>
-            <div class="label__row label__row--muted">
-              <span>Ściema, marketing, lokowanie produktów</span>
-              <span>0%</span>
-            </div>
-          </div>
-
-          <div class="label__price">
-            <s>99 zł</s>
-            <strong>49 zł</strong>
-          </div>
-
-          <!-- W Shopify: href="/cart/ID_WARIANTU:1" -->
-          <a href="#checkout" class="btn btn--primary btn--block" id="offer-cta">Kupuję i pobieram natychmiast</a>
-          <p class="label__note"><i data-lucide="lock"></i> Bezpieczna płatność. E-book trafia na maila zaraz po zapłacie.</p>
-
-          <ul class="pay">
-            <li class="pay__blik">BLIK</li>
-            <li>Apple&nbsp;Pay</li>
-            <li>Google&nbsp;Pay</li>
-            <li>Visa</li>
-            <li>Mastercard</li>
-          </ul>
-        </div>
+        <p class="author">Autor: <b>Michał Gati</b></p>
       </div>
     </section>
 
-    <!-- ============ 8. FAQ ============ -->
+    <!-- 8. FAQ -->
     <section class="section" id="faq">
-      <div class="wrap wrap--narrow">
-        <h2 class="section__title">Częste pytania</h2>
-        <div class="accordion">
+      <div class="wrap wrap--read">
+        <h2>Pytania, które zwykle padają</h2>
+        <div class="faq">
           <details>
-            <summary>W jakiej formie otrzymam e-booka?</summary>
-            <p>Zaraz po płatności dostaniesz maila z linkiem do pobrania plików PDF i EPUB. Zwykle trwa to kilka sekund. Sprawdź też folder „Oferty” lub spam.</p>
+            <summary>To kolejny e-book o suplementach?</summary>
+            <p>Mniej więcej połowa tej książki mówi, czego nie kupować. Cała część III, osiem rozdziałów, to lista rzeczy, na które szkoda pieniędzy albo zdrowia. <a href="#spis">Zobacz spis treści.</a></p>
           </details>
           <details>
-            <summary>Czy poradnik jest dla kobiet i mężczyzn?</summary>
-            <p>Tak. Tam, gdzie potrzeby się różnią (np. żelazo, dawki białka), znajdziesz osobne wskazówki.</p>
+            <summary>Skąd mam wiedzieć, że to nie reklama?</summary>
+            <p>Nie ma tu linków afiliacyjnych ani sponsorów. Żaden producent nie zapłacił za obecność ani za nieobecność w tej książce. Przy każdej substancji z części III jest pole „dla kogo to może mieć sens”, a w kartach części płatnej pole „czego wciąż nie wiemy”.</p>
           </details>
           <details>
-            <summary>Czy potrzebuję badań krwi?</summary>
-            <p>Nie musisz, żeby zacząć czytać. W e-booku wyjaśniam, które badania warto zrobić przed suplementacją i jak czytać wyniki, żeby nie brać czegoś na ślepo.</p>
+            <summary>Czy to się w ogóle opłaca?</summary>
+            <p>Część darmowa kosztuje adres e-mail. Jej pierwszy rozdział to cztery badania krwi za 130–175 zł, jednorazowo. Dla porównania: sam kolagen, ashwagandha i „kompleks na odporność” to spokojnie 150 zł miesięcznie. Badania robisz raz i wiesz. Suplementy na chybił trafił kupujesz co miesiąc i nadal nie wiesz.</p>
           </details>
           <details>
-            <summary>Czy zapłacę BLIK-iem?</summary>
-            <p>Tak. Możesz zapłacić BLIK-iem, Apple Pay, Google Pay albo kartą.</p>
+            <summary>Kto to napisał?</summary>
+            <p>Michał Gati. Książka nie ma sponsorów ani afiliacji. Każda z 40 substancji ma przypisany poziom dowodu, a za tekstem stoi ponad 1400 zweryfikowanych odniesień do źródeł. Recenzja merytoryczna dietetyka jeszcze się nie odbyła; jej wyniki trafią do osobnego aneksu.</p>
           </details>
           <details>
-            <summary>Czy to zastępuje wizytę u lekarza?</summary>
-            <p>Nie. E-book to materiał edukacyjny. Jeśli chorujesz przewlekle albo bierzesz leki, skonsultuj suplementację z lekarzem.</p>
+            <summary>Jak dostanę PDF?</summary>
+            <p>Mailem, na adres podany w formularzu. Zgoda na maile o nowościach jest osobnym, nieobowiązkowym polem. Bez niej dostajesz tylko plik.</p>
+          </details>
+          <details>
+            <summary>Kiedy będzie część płatna?</summary>
+            <p>Gdy będą gotowe brakujące rozdziały i aneksy, w tym rozdział o suplementach, które wchodzą w drogę leczeniu, i tabela interakcji z lekami. Nie podaję daty, której nie jestem pewny. <a href="#powiadom">Zostaw adres</a>, a dostaniesz jedną wiadomość, kiedy będzie dostępna.</p>
+          </details>
+          <details>
+            <summary>Czy to porada medyczna?</summary>
+            <p>Nie. Ta książka nie zna Twojej historii chorób, Twoich leków ani Twoich wyników. Nie zastąpi wizyty u lekarza i nie ma takich ambicji.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ============ FINAL CTA ============ -->
+    <!-- 9. CTA -->
     <section class="final">
-      <div class="wrap final__inner">
-        <h2>Przestań zgadywać. Zacznij brać to, co działa.</h2>
-        <a href="#oferta" class="btn btn--light">Kup e-booka za 49 zł</a>
+      <div class="wrap final__grid">
+        <div class="final__box">
+          <h2>Zacznij od części darmowej</h2>
+          <p>48 stron: ramy decyzyjne, cztery badania i osiem rozdziałów o tym, czego nie kupować.</p>
+          <form class="signup" data-tags="zanim-kupisz,pdf-czesc-darmowa" data-success="Gotowe. PDF jest w drodze na podany adres. Jeśli nie widzisz go za kilka minut, sprawdź folder „Oferty” albo spam.">
+            <label class="signup__label" for="email-final">Adres e-mail</label>
+            <div class="signup__row">
+              <input class="signup__input" type="email" id="email-final" name="contact[email]" autocomplete="email" inputmode="email" placeholder="ty@przyklad.pl" required>
+              <button class="btn" type="submit">Wyślij mi PDF</button>
+            </div>
+            <label class="signup__consent">
+              <input type="checkbox" name="marketing">
+              <span>Chcę też dostawać maile o nowych rozdziałach i części płatnej. Nieobowiązkowe, mogę się wypisać w każdej chwili.</span>
+            </label>
+            <p class="signup__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="final__box final__box--quiet" id="powiadom">
+          <h3>Część płatna: powiadom mnie</h3>
+          <p>32 karty substancji, siedem ścieżek i część „Ostrożnie”. Jeszcze w przygotowaniu. Wyślę jedną wiadomość, kiedy będzie dostępna.</p>
+          <form class="signup" data-tags="zanim-kupisz,powiadom-czesc-platna" data-success="Zapisane. Napiszę, kiedy część płatna będzie dostępna.">
+            <label class="signup__label" for="email-wait">Adres e-mail</label>
+            <div class="signup__row">
+              <input class="signup__input" type="email" id="email-wait" name="contact[email]" autocomplete="email" inputmode="email" placeholder="ty@przyklad.pl" required>
+              <button class="btn btn--ghost" type="submit">Powiadom mnie</button>
+            </div>
+            <p class="signup__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -319,23 +369,21 @@
 
   <footer class="footer">
     <div class="wrap footer__inner">
-      <p>© 2026 [Twoje Imię]. Wszystkie prawa zastrzeżone.</p>
+      <p class="footer__disclaimer">„Zanim kupisz” nie jest poradą lekarską. Nie zna Twojej historii chorób, Twoich leków ani Twoich wyników i nie zastąpi wizyty u lekarza. Nie zawiera linków afiliacyjnych ani treści sponsorowanych.</p>
       <nav>
         <a href="#">Regulamin</a>
         <a href="#">Polityka prywatności</a>
         <a href="#">Kontakt</a>
       </nav>
-      <p class="footer__disclaimer">Treści w e-booku mają charakter edukacyjny i nie zastępują porady lekarza ani dietetyka.</p>
+      <p class="tiny">© 2026 Michał Gati</p>
     </div>
   </footer>
 
-  <!-- Sticky pasek zakupu (mobile) -->
-  <div class="sticky-buy" id="sticky-buy" aria-hidden="true">
-    <div class="sticky-buy__price"><s>99 zł</s> <strong>49 zł</strong></div>
-    <a href="#oferta" class="btn btn--primary" tabindex="-1">Kup e-booka</a>
+  <div class="sticky" id="sticky" aria-hidden="true">
+    <span>Pierwsze 48 stron za darmo</span>
+    <a href="#pobierz" class="btn" tabindex="-1">Pobierz PDF</a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

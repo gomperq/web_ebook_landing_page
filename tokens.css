@@ -1,0 +1,91 @@
+/* „Zanim kupisz" — tokeny systemu wizualnego
+   Źródło: system graficzny książki (bramka B4). Nie zmieniaj wartości bez powodu. */
+
+:root{
+  /* tło i powierzchnie */
+  --ground:#F6F7F9;
+  --surface:#FFFFFF;
+
+  /* tekst */
+  --ink:#141A24;      /* podstawowy */
+  --ink-2:#3D4756;    /* drugorzędny, lede */
+  --ink-3:#6B7686;    /* etykiety, metadane */
+
+  /* linie */
+  --rule:#DDE1E8;
+  --rule-2:#EBEEF2;
+
+  /* akcent — jeden, granatowy. Nie dodawaj drugiego */
+  --accent:#27389B;
+  --accent-soft:#E6E9F6;
+
+  /* ostrzeżenie — wyłącznie do bezpieczeństwa, nigdy do promocji */
+  --warn:#A5321F;
+  --warn-soft:#F7E9E5;
+
+  /* okładka / motyw paragonu */
+  --receipt-bg:#EFEDE6;
+  --receipt-ink:#16181C;
+
+  /* kroje */
+  --display:'Archivo',system-ui,sans-serif;   /* 500 600 700 800 */
+  --body:'Literata',Georgia,serif;            /* 400 700 + italic */
+  --mono:'IBM Plex Mono',ui-monospace,monospace; /* 400 500 600 */
+}
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1218; --surface:#161C25; --ink:#E8EBF0; --ink-2:#AEB7C4;
+    --ink-3:#7C8697; --rule:#2A323E; --rule-2:#212833;
+    --accent:#8FA3F0; --accent-soft:#1D2540; --warn:#E8927C; --warn-soft:#331E18;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1218; --surface:#161C25; --ink:#E8EBF0; --ink-2:#AEB7C4;
+  --ink-3:#7C8697; --rule:#2A323E; --rule-2:#212833;
+  --accent:#8FA3F0; --accent-soft:#1D2540; --warn:#E8927C; --warn-soft:#331E18;
+}
+
+/* ─── typografia ─── */
+body{background:var(--ground);color:var(--ink);font-family:var(--body);
+     font-size:16px;line-height:1.65}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5.2vw,48px);font-weight:800;letter-spacing:-.025em;line-height:1.06}
+h2{font-size:clamp(21px,2.9vw,27px);font-weight:700;letter-spacing:-.015em}
+h3{font-size:17px;font-weight:700}
+
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3)}
+.lede{font-size:18px;color:var(--ink-2);max-width:60ch}
+.tiny{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.5}
+
+/* ─── plakietki poziomu dowodu ─────────────────────────────────────────
+   UWAGA: poziom dowodu to NIE ocena „czy działa". BCAA ma poziom 1
+   i nie działa. Dlatego plakietki używają gęstości jednego koloru,
+   nigdy zieleni i czerwieni. Kolor ostrzegawczy jest osobny i służy
+   wyłącznie bezpieczeństwu.                                          */
+.pill{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;padding:5px 9px;border-radius:2px;display:inline-block;white-space:nowrap}
+.p1{background:var(--accent);color:#fff}
+.p2{background:var(--accent-soft);color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.p3{background:transparent;color:var(--ink-2);box-shadow:inset 0 0 0 1px var(--rule)}
+.p4{background:transparent;color:var(--ink-3);box-shadow:inset 0 0 0 1px var(--rule);
+  background-image:repeating-linear-gradient(135deg,transparent 0 4px,var(--rule-2) 4px 5px)}
+.pw{background:var(--warn-soft);color:var(--warn);box-shadow:inset 0 0 0 1.5px var(--warn)}
+
+/* ─── ramki ─── */
+.note{background:var(--accent-soft);border-left:3px solid var(--accent);padding:14px 16px;border-radius:0 3px 3px 0}
+.warnbox{background:var(--warn-soft);border-left:3px solid var(--warn);padding:14px 16px;border-radius:0 3px 3px 0}
+
+/* ─── motyw paragonu (hero) ─── */
+.receipt{background:var(--receipt-bg);color:var(--receipt-ink);font-family:var(--mono);
+  font-size:13px;line-height:1.9;padding:26px 22px}
+.receipt .row{display:flex;justify-content:space-between;gap:10px}
+.receipt .strike{text-decoration:line-through;opacity:.42}
+.receipt .dash{border-top:1px dashed var(--receipt-ink);opacity:.35;margin:8px 0}
+
+/* ─── tabele ─── */
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);text-align:left;font-weight:500;padding:0 10px 7px 0;border-bottom:1px solid var(--rule)}
+td{padding:9px 10px 9px 0;border-bottom:1px solid var(--rule-2);vertical-align:top}
